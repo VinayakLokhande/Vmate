@@ -18,9 +18,9 @@ This is complete social media android application where you can make new friends
      <td>SignUp</td>
   </tr>
   <tr>
-    <td valign="top"><img src="https://github.com/VinayakLokhande/VmateSocialMediaApp/blob/main/screenshots/SplashScreen.jpg" width="300" height="500"></td>
-    <td valign="top"><img src="https://github.com/VinayakLokhande/VmateSocialMediaApp/blob/main/screenshots/Login.jpg" width="300" height="500"></td>
-    <td valign="top"><img src="https://github.com/VinayakLokhande/VmateSocialMediaApp/blob/main/screenshots/SignUp.jpg" width="300" height="500"></td>
+    <td valign="top"><img src="https://github.com/VinayakLokhande/Vmate/blob/main/screenshots/SplashScreen.jpg" width="300" height="500"></td>
+    <td valign="top"><img src="https://github.com/VinayakLokhande/Vmate/blob/main/screenshots/Login.jpg" width="300" height="500"></td>
+    <td valign="top"><img src="https://github.com/VinayakLokhande/Vmate/blob/main/screenshots/SignUp.jpg" width="300" height="500"></td>
   </tr>  
   
    <tr>
@@ -29,9 +29,9 @@ This is complete social media android application where you can make new friends
      <td>AddPost</td>
   </tr>
   <tr>
-    <td valign="top"><img src="https://github.com/VinayakLokhande/VmateSocialMediaApp/blob/main/screenshots/Home.jpg" width="300" height="500"></td>
-    <td valign="top"><img src="https://github.com/VinayakLokhande/VmateSocialMediaApp/blob/main/screenshots/Notifications.jpg" width="300" height="500"></td>
-    <td valign="top"><img src="https://github.com/VinayakLokhande/VmateSocialMediaApp/blob/main/screenshots/AddPost.jpg" width="300" height="500"></td>
+    <td valign="top"><img src="https://github.com/VinayakLokhande/Vmate/blob/main/screenshots/Home.jpg" width="300" height="500"></td>
+    <td valign="top"><img src="https://github.com/VinayakLokhande/Vmate/blob/main/screenshots/Notifications.jpg" width="300" height="500"></td>
+    <td valign="top"><img src="https://github.com/VinayakLokhande/Vmate/blob/main/screenshots/AddPost.jpg" width="300" height="500"></td>
    
   </tr>
   
@@ -41,9 +41,9 @@ This is complete social media android application where you can make new friends
     <td>ChatList</td>
   </tr>
   <tr>
-   <td valign="top"><img src="https://github.com/VinayakLokhande/VmateSocialMediaApp/blob/main/screenshots/Search.jpg" width="300" height="500""></td>
-   <td valign="top"><img src="https://github.com/VinayakLokhande/VmateSocialMediaApp/blob/main/screenshots/Profile.jpg" width="300" height="500""></td>
-   <td valign="top"><img src="https://github.com/VinayakLokhande/VmateSocialMediaApp/blob/main/screenshots/chatList.jpg" width="300" height="500""></td>
+   <td valign="top"><img src="https://github.com/VinayakLokhande/Vmate/blob/main/screenshots/Search.jpg" width="300" height="500""></td>
+   <td valign="top"><img src="https://github.com/VinayakLokhande/Vmate/blob/main/screenshots/Profile.jpg" width="300" height="500""></td>
+   <td valign="top"><img src="https://github.com/VinayakLokhande/Vmate/blob/main/screenshots/chatList.jpg" width="300" height="500""></td>
  </tr>
        
   <tr>
@@ -51,8 +51,8 @@ This is complete social media android application where you can make new friends
      <td>EditProfile</td>
   </tr>
   <tr>
-   <td valign="top"><img src="https://github.com/VinayakLokhande/VmateSocialMediaApp/blob/main/screenshots/chat.jpg" width="300" height="500""></td>
-   <td valign="top"><img src="https://github.com/VinayakLokhande/VmateSocialMediaApp/blob/main/screenshots/Edit%20Profile.jpg" width="300" height="500""></td>
+   <td valign="top"><img src="https://github.com/VinayakLokhande/Vmate/blob/main/screenshots/chat.jpg" width="300" height="500""></td>
+   <td valign="top"><img src="https://github.com/VinayakLokhande/Vmate/blob/main/screenshots/Edit%20Profile.jpg" width="300" height="500""></td>
  </tr>
            
  </table>
