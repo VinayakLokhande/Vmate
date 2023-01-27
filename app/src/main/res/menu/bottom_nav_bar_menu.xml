@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/homeBottomItem"
+        android:title="@string/home"
+        android:icon="@drawable/home_cheked_or_not"/>
+
+    <item android:id="@+id/notificationBottomItem"
+        android:title="@string/notifications"
+        android:icon="@drawable/notification_cheked_or_not"/>
+
+    <item android:id="@+id/addBottomItem"
+        android:title="@string/add"
+        android:icon="@drawable/add_cheked_or_not" />
+
+    <item android:id="@+id/searchBottomItem"
+        android:title="@string/search"
+        android:icon="@drawable/search_cheked_or_not"/>
+
+    <item android:id="@+id/profileBottomItem"
+        android:title="@string/profile"
+        android:icon="@drawable/user_profile_cheked_or_not"/>
+
+</menu>

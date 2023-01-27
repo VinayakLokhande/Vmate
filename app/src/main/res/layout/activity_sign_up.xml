@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBarSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/loginImg"
+                android:layout_width="@dimen/_200mdp"
+                android:layout_height="@dimen/_150mdp"
+                android:layout_marginTop="@dimen/_4mdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/signup_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/signUpTitleTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_135mdp"
+                android:fontFamily="@font/robotic"
+                android:text="@string/sing_up"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25font_mdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/loginImg"
+                app:layout_constraintStart_toStartOf="@+id/loginImg"
+                app:layout_constraintTop_toTopOf="@+id/loginImg" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUpUsername_InputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20mdp"
+                android:layout_marginTop="@dimen/_5mdp"
+                android:layout_marginEnd="@dimen/_20mdp"
+                android:hint="@string/username"
+                app:boxStrokeColor="@color/redish"
+                app:boxStrokeErrorColor="@color/redish"
+                app:counterEnabled="true"
+                app:counterMaxLength="15"
+                app:endIconMode="clear_text"
+                app:errorTextColor="@color/redish"
+                app:hintTextColor="@color/redish"
+                app:layout_constraintEnd_toEndOf="@+id/loginImg"
+                app:layout_constraintStart_toStartOf="@+id/loginImg"
+                app:layout_constraintTop_toBottomOf="@+id/signUpTitleTxtView"
+                app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signUpUsername_InputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40mdp"
+                    android:fontFamily="@font/robotic"
+                    android:inputType="text"
+                    android:maxLength="15"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUpEmail_InputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20mdp"
+                android:layout_marginEnd="@dimen/_20mdp"
+                android:hint="@string/email"
+                app:boxStrokeColor="@color/redish"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/redish"
+                app:layout_constraintEnd_toEndOf="@+id/signUpUsername_InputLayout"
+                app:layout_constraintStart_toStartOf="@+id/signUpUsername_InputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/signUpUsername_InputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_email_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signUpEmail_InputEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40mdp"
+                    android:fontFamily="@font/robotic"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUpPassword_InputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20mdp"
+                android:layout_marginTop="@dimen/_15mdp"
+                android:layout_marginEnd="@dimen/_20mdp"
+                android:hint="@string/password"
+                app:boxStrokeColor="@color/redish"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:endIconMode="password_toggle"
+                app:hintTextColor="@color/redish"
+                app:layout_constraintEnd_toEndOf="@+id/signUpEmail_InputLayout"
+                app:layout_constraintStart_toStartOf="@+id/signUpEmail_InputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/signUpEmail_InputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signUpPassword_InputEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40mdp"
+                    android:fontFamily="@font/robotic"
+                    android:inputType="textPassword"
+                    android:maxLength="10"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUpPhone_InputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20mdp"
+                android:layout_marginEnd="@dimen/_20mdp"
+                android:hint="@string/phone"
+                app:boxStrokeColor="@color/redish"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/redish"
+                app:layout_constraintEnd_toEndOf="@+id/signUpPassword_InputLayout"
+                app:layout_constraintStart_toStartOf="@+id/signUpPassword_InputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/signUpPassword_InputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_phone_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signUpPhone_InputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40mdp"
+                    android:fontFamily="@font/robotic"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUpProfession_InputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20mdp"
+                android:layout_marginEnd="@dimen/_20mdp"
+                android:hint="@string/profession"
+                app:boxStrokeColor="@color/redish"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/redish"
+                app:layout_constraintEnd_toEndOf="@+id/signUpPassword_InputLayout"
+                app:layout_constraintStart_toStartOf="@+id/signUpPassword_InputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/signUpPhone_InputLayout"
+                app:startIconDrawable="@drawable/ic_baseline_business_center_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signUpProfession_InputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40mdp"
+                    android:fontFamily="@font/robotic"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signUpBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_marginStart="@dimen/_20mdp"
+                android:layout_marginTop="@dimen/_7mdp"
+                android:layout_marginEnd="@dimen/_20mdp"
+                android:background="@drawable/signup_login_btn_bg"
+                android:fontFamily="@font/robotic"
+                android:text="@string/create_sing_up"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/signUpProfession_InputLayout"
+                app:layout_constraintStart_toStartOf="@+id/signUpProfession_InputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/signUpProfession_InputLayout" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

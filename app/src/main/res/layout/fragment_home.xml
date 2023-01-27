@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HomeFragment">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/discover"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:fontFamily="@font/font_big"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_24font_mdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/homeFrag_ChatListBtn"
+        android:layout_width="@dimen/_25mdp"
+        android:layout_height="@dimen/_25mdp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/send"
+        app:layout_constraintBottom_toBottomOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_1mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintVertical_bias="0.5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5mdp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6mdp">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/homeFrag_AddStoryImgView"
+                            android:layout_width="@dimen/_50mdp"
+                            android:layout_height="@dimen/_50mdp"
+                            android:layout_marginTop="@dimen/_6mdp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/gray_bg_img"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/homeFrag_AddStoryImgView_view"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/blackish_bg"
+                            app:layout_constraintBottom_toBottomOf="@+id/homeFrag_AddStoryImgView"
+                            app:layout_constraintEnd_toEndOf="@+id/homeFrag_AddStoryImgView"
+                            app:layout_constraintStart_toStartOf="@+id/homeFrag_AddStoryImgView"
+                            app:layout_constraintTop_toTopOf="@+id/homeFrag_AddStoryImgView" />
+
+                        <View
+                            android:id="@+id/homeFrag_AddStoryImgView_AddIcon_outline_view"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/white_bg"
+                            app:layout_constraintBottom_toBottomOf="@+id/homeFrag_AddStoryImgView_AddIcon"
+                            app:layout_constraintEnd_toEndOf="@+id/homeFrag_AddStoryImgView_AddIcon"
+                            app:layout_constraintStart_toStartOf="@+id/homeFrag_AddStoryImgView_AddIcon"
+                            app:layout_constraintTop_toTopOf="@+id/homeFrag_AddStoryImgView_AddIcon" />
+
+                        <ImageView
+                            android:id="@+id/homeFrag_AddStoryImgView_AddIcon"
+                            android:layout_width="@dimen/_20mdp"
+                            android:layout_height="@dimen/_20mdp"
+                            android:src="@drawable/ic_baseline_add_circle_24"
+                            app:layout_constraintBottom_toBottomOf="@+id/homeFrag_AddStoryImgView"
+                            app:layout_constraintEnd_toEndOf="@+id/homeFrag_AddStoryImgView"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="@+id/homeFrag_AddStoryImgView"
+                            app:layout_constraintTop_toTopOf="@+id/homeFrag_AddStoryImgView"
+                            app:layout_constraintVertical_bias="1.0" />
+
+
+                        <TextView
+                            android:id="@+id/homeFrag_CreateStoryTxtView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/your_story"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10font_mdp"
+                            android:fontFamily="@font/robotic"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/homeFrag_AddStoryImgView"
+                            app:layout_constraintStart_toStartOf="@+id/homeFrag_AddStoryImgView"
+                            app:layout_constraintTop_toBottomOf="@+id/homeFrag_AddStoryImgView" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shimmerLayoutStories"
+                        android:layout_marginStart="@dimen/_5mdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <include layout="@layout/stories_shimmer_effect_design"/>
+                            <include layout="@layout/stories_shimmer_effect_design"/>
+                            <include layout="@layout/stories_shimmer_effect_design"/>
+                            <include layout="@layout/stories_shimmer_effect_design"/>
+                            <include layout="@layout/stories_shimmer_effect_design"/>
+
+                        </LinearLayout>
+
+
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/homeFrag_storiesRecView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/homeFrag_AddStoryImgView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/homeFrag_AddStoryImgView_AddIcon_outline_view"
+                        app:layout_constraintTop_toTopOf="@+id/homeFrag_AddStoryImgView" />
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <View
+                android:id="@+id/stories_bottom_line_view"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_1mdp"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayoutPosts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12mdp"
+                app:layout_constraintTop_toBottomOf="@+id/stories_bottom_line_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/posts_design_shimmer_effect"/>
+                    <include layout="@layout/posts_design_shimmer_effect"/>
+                    <include layout="@layout/posts_design_shimmer_effect"/>
+                    <include layout="@layout/posts_design_shimmer_effect"/>
+                    <include layout="@layout/posts_design_shimmer_effect"/>
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/postsRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_12mdp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stories_bottom_line_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!-- 3) model class and adapter class create keli home frag sathi so ata adapter class-->
+<!--madhe chala-->
+
+
+
+

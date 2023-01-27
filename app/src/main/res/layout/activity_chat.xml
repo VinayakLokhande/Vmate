@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/chatAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/chatToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/redish">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/chatProfileImg"
+                android:layout_width="@dimen/_40mdp"
+                android:layout_height="@dimen/_40mdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gray_bg_img" />
+
+            <TextView
+                android:id="@+id/chatUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10mdp"
+                android:fontFamily="@font/robotic"
+                android:text="nayak"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14font_mdp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatMessagesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:layout_marginBottom="@dimen/_10mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatAppBar"
+        app:layout_constraintBottom_toTopOf="@id/v"/>
+
+    <View
+        android:id="@+id/v"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_5mdp"
+        android:layout_marginEnd="@dimen/_5mdp"
+        android:background="@drawable/comment_edit_txt_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/chatMsgEditTxt"
+        app:layout_constraintTop_toTopOf="@+id/chatMsgEditTxt" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/chatMsgEditTxt"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40mdp"
+        android:layout_marginStart="@dimen/_5mdp"
+        android:layout_marginBottom="@dimen/_5mdp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/robotic"
+        android:hint="@string/enter_msg"
+        android:inputType="textMultiLine"
+        android:paddingStart="@dimen/_5mdp"
+        android:paddingEnd="@dimen/_5mdp"
+        android:scrollbars="vertical"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/chatMsgSendBtn"
+        app:layout_constraintEnd_toStartOf="@+id/chatMsgSendBtn"
+        app:layout_constraintStart_toStartOf="@+id/v"
+        app:layout_constraintTop_toTopOf="@+id/chatMsgSendBtn" />
+
+    <ImageView
+        android:id="@+id/chatMsgSendBtn"
+        android:layout_width="@dimen/_25mdp"
+        android:layout_height="@dimen/_25mdp"
+        android:layout_marginEnd="@dimen/_5mdp"
+        android:src="@drawable/send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/v"
+        app:layout_constraintTop_toTopOf="@+id/v"
+        app:layout_goneMarginEnd="@dimen/_3mdp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

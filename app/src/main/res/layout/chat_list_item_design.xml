@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/chatList_userImg"
+        android:layout_width="@dimen/_40mdp"
+        android:layout_height="@dimen/_40mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginBottom="@dimen/_10mdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gray_bg_img"
+        app:civ_border_color="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.76" />
+
+    <TextView
+        android:id="@+id/chatList_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/robotic"
+        android:text="ddsfdsf"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12font_mdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/chatList_userImg"
+        app:layout_constraintStart_toEndOf="@+id/chatList_userImg"
+        app:layout_constraintTop_toTopOf="@+id/chatList_userImg"
+        app:layout_constraintVertical_bias="0.23000002" />
+
+    <TextView
+        android:id="@+id/lastMsgTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Message : "
+        android:fontFamily="@font/robotic"
+        android:textSize="@dimen/_9font_mdp"
+        android:textColor="@color/redish"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/chatList_userImg"
+        app:layout_constraintEnd_toEndOf="@+id/chatList_userName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/chatList_userName"
+        app:layout_constraintTop_toBottomOf="@+id/chatList_userName" />
+
+    <TextView
+        android:id="@+id/chatList_lastMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/robotic"
+        android:visibility="gone"
+        android:textColor="#A3A2A2"
+        android:maxLines="1"
+        android:text="fdfdfdfdfdffdffdffdfsdfdffdfdffdfdf"
+        android:textSize="@dimen/_9font_mdp"
+        android:layout_marginEnd="@dimen/_20mdp"
+        app:layout_constraintBottom_toBottomOf="@id/lastMsgTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lastMsgTxt"
+        app:layout_constraintTop_toTopOf="@id/lastMsgTxt" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

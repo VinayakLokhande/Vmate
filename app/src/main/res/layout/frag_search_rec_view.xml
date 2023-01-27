@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/searchFragProfile"
+        android:layout_width="@dimen/_50mdp"
+        android:layout_height="@dimen/_50mdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gray_bg_img"
+        app:civ_border_color="@color/white"
+        android:layout_marginBottom="@dimen/_10mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/searchFrag_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:text=""
+        android:fontFamily="@font/robotic"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15font_mdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/searchFrag_profession"
+        app:layout_constraintStart_toEndOf="@+id/searchFragProfile"
+        app:layout_constraintTop_toTopOf="@+id/searchFragProfile"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/searchFrag_profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:fontFamily="@font/robotic"
+        android:textSize="@dimen/_12font_mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/searchFragProfile"
+        app:layout_constraintEnd_toEndOf="@+id/searchFrag_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/searchFrag_name"
+        app:layout_constraintTop_toBottomOf="@+id/searchFrag_name" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/searchFrag_followBtn"
+        android:layout_width="@dimen/_81mdp"
+        android:layout_height="@dimen/_30mdp"
+        android:layout_marginEnd="@dimen/_16mdp"
+        android:text="@string/follow"
+        android:fontFamily="@font/robotic"
+        android:textStyle="bold"
+        android:textSize="@dimen/_10font_mdp"
+        app:elevation="@dimen/_15mdp"
+        app:backgroundTint="@null"
+        android:background="@drawable/follow_btn_style_solid_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/searchFragProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchFragProfile"
+        app:layout_constraintVertical_bias="0.47" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

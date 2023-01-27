@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".EditProfileActivity">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/coverImgView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130mdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/big_img_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_130mdp"
+        android:background="@drawable/blackish_rectangle_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/coverImgView"
+        app:layout_constraintEnd_toEndOf="@+id/coverImgView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/coverImgView"
+        app:layout_constraintTop_toTopOf="@+id/coverImgView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/changeCoverImgBtn"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:layout_marginEnd="@dimen/_20mdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/picture"
+        app:layout_constraintBottom_toBottomOf="@+id/coverImgView"
+        app:layout_constraintEnd_toEndOf="@+id/coverImgView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.923" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/EditProfileDoneBtn"
+        android:layout_width="@dimen/_65mdp"
+        android:layout_height="@dimen/_30mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:fontFamily="@font/robotic"
+        android:background="@drawable/follow_btn_style_solid_bg"
+        android:text="@string/done_btn"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/coverImgView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImg"
+        android:layout_width="@dimen/_100mdp"
+        android:layout_height="@dimen/_100mdp"
+        android:layout_marginTop="@dimen/_80mdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_img"
+        app:civ_border_color="@color/white"
+        app:civ_border_overlay="true"
+        app:civ_border_width="@dimen/_4mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="@+id/coverImgView"
+        app:layout_constraintTop_toTopOf="@+id/coverImgView" />
+
+    <View
+        android:id="@+id/homeFrag_AddStoryImgView_AddIcon_outline_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/white_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/changeProfileImgBtn"
+        app:layout_constraintEnd_toEndOf="@+id/changeProfileImgBtn"
+        app:layout_constraintStart_toStartOf="@+id/changeProfileImgBtn"
+        app:layout_constraintTop_toTopOf="@+id/changeProfileImgBtn" />
+
+    <ImageView
+        android:id="@+id/changeProfileImgBtn"
+        android:layout_width="@dimen/_30mdp"
+        android:layout_height="@dimen/_30mdp"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        app:layout_constraintBottom_toBottomOf="@+id/profileImg"
+        app:layout_constraintEnd_toEndOf="@+id/profileImg"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/profileImg"
+        app:layout_constraintTop_toTopOf="@+id/profileImg"
+        app:layout_constraintVertical_bias="0.85" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/EditProfileUserProfession_InputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_30mdp"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:hint="@string/edit_profession"
+        app:boxStrokeColor="@color/redish"
+        app:boxStrokeErrorColor="@color/redish"
+        app:endIconMode="clear_text"
+        app:errorTextColor="@color/redish"
+        app:hintTextColor="@color/redish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileImg">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/UserProfessionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50mdp"
+            android:inputType="text"
+            android:fontFamily="@font/robotic"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/EditProfileUserBio_InputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_20mdp"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:hint="@string/edit_bio"
+        app:boxStrokeColor="@color/redish"
+        app:boxStrokeErrorColor="@color/redish"
+        app:endIconMode="clear_text"
+        app:errorTextColor="@color/redish"
+        app:hintTextColor="@color/redish"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditProfileUserProfession_InputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/UserBioEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:maxLength="150"
+            android:maxLines="5"
+            android:fontFamily="@font/robotic"
+            android:scrollbars="vertical"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

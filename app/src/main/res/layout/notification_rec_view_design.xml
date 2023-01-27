@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/notificationDesignParentItem"
+    android:background="@color/app_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/notification_profile_img"
+        android:layout_width="@dimen/_50mdp"
+        android:layout_height="@dimen/_50mdp"
+        android:layout_marginBottom="@dimen/_5mdp"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gray_bg_img"
+        app:civ_border_color="@color/white"
+        app:civ_border_overlay="true"
+        app:civ_border_width="@dimen/_2mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/notification_notiText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:layout_marginEnd="@dimen/_5mdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/robotic"
+        android:maxLines="2"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15font_mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/notification_profile_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/notification_profile_img"
+        app:layout_constraintTop_toTopOf="@+id/notification_profile_img"
+        app:layout_constraintVertical_bias="0.23000002" />
+
+    <TextView
+        android:id="@+id/notification_timeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:fontFamily="@font/robotic"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/_10font_mdp"
+        app:layout_constraintEnd_toEndOf="@+id/notification_notiText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/notification_notiText"
+        app:layout_constraintTop_toBottomOf="@+id/notification_notiText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
